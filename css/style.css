@@ -1,0 +1,133 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ffd6e8, #ff82a9);
+    color: #6b2c42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+  header {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #b3426c;
+    text-shadow: 2px 2px 5px rgba(255 255 255 / 0.7);
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    max-width: 360px;
+    margin: 0 auto 30px;
+    color: #7f3e5c;
+  }
+  main {
+    max-width: 400px;
+    align-items: center;
+    width: 100%;
+    background: #ffe1f2dd;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(203, 81, 119, 0.15);
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(179, 66, 108, 0.3);
+  }
+  p.message {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #8c3b5d;
+  }
+  button {
+    background-color: #b3426c;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 12px rgba(179, 66, 108, 0.5);
+  }
+  button:hover,
+  button:focus {
+    background-color: #d15783;
+    outline: none;
+  }
+  footer {
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: #7f3e5c;
+    padding: 15px 10px 5px;
+  }
+  @media (max-width: 400px) {
+    header {
+      font-size: 2.5rem;
+    }
+    main {
+      padding: 15px;
+    }
+    p.message {
+      font-size: 1.1rem;
+    }
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+
+  /* Animaciones de entrada */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: fadeInUp 1s ease both;
+}
+.fade-in.delay-1 {
+  animation-delay: 0.3s;
+}
+.fade-in.delay-2 {
+  animation-delay: 0.6s;
+}
+.fade-in.delay-3 {
+  animation-delay: 0.9s;
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 1);
+  }
+}
+
+button.pulsate {
+  animation: pulse 2s infinite;
+}
